@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style>
+        div {
+            background-color: red;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Todo List</h1>
+    <form action="" id="form">
+        <div></div>
+        <input type="text" name="text" id="todo"> <button type="submit">tambah</button>
+    </form>
+    <ul>
+
+    </ul>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function (event) {
+                event.preventDefault();
+            })
+        })
+
+    </script>
+</body>
+
+</html>

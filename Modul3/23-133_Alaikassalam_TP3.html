@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP3</title>
+</head>
+
+<body>
+    <fieldset><br><br>
+        <form action="" method="post">
+            <font face="verdana">
+                <center>
+                    <font size="6px"><b>DATA STUDENT</b></font>
+                </center><br><br>
+                <table cellspacing="2px" border="0">
+                    <!-- pertama -->
+                    <thead>
+                        <tr>
+                            <th bgcolor="iceblue" colspan="5" align="left" height="30px" width="120px">
+                                <font>PERSONAL DATA</font>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <font size="3x"><label for="Name">Name</label></font>
+                            </td>
+                            <td><input type="text" name="tb1" id="fn" size="45px" autofocus></td>
+                            <td><input type="text" name="" id="in" size="45px"></td>
+                            <td><input type="text" name="" id="im" size="45px"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>
+                                <font size="2">
+                                    <label for="fn" name="tb1" id="if">First name</label>
+                                </font>
+                            </td>
+                            <td>
+                                <font size="2">Middle name</font>
+                            </td>
+                            <td>
+                                <font size="2">last name</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <font size="3px"><label for="Nim">NIM</label></font>
+                            </td>
+                            <td colspan="2"><input type="text" name="" id="" size="96px"></td>
+                            <td><input name="Nim" id="Nim" list="nim1" size="45px">
+                                <select name="" id="nim1">
+                                    <option value="--Year of University Entrance--" disabled selected>--Year of University Entrance-- &emsp;&emsp;
+                                    </option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                </select>    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <font size="3px"><label for="faculty">Faculty Departement & Program</label></font>
+                            </td>
+                            <td><input name="faculty" id="Faculty" list="faculty1" size="46px">
+                                <datalist id="faculty1">
+                                    <option value="--Faculty--">--Faculty--</option>
+                                    <option value="Engineering">Engineering</option>
+                                    <option value="Law">Law</option>
+                                    <option value="Economics">Economics</option>
+                                </datalist>
+                            </td>
+                            <td><input name="Departement" id="Faculty" list="faculty2" size="45px">
+                                <datalist id="faculty2">
+                                    <option value="--Departement--">--Departement--</option>
+                                    <option value="Informatics">Informatics</option>
+                                    <option value="Industrial Engineering">Industrial Engineering</option>
+                                    <option value="Eletrical Engineering">Eletrical Engineering</option>
+                                </datalist>
+                            </td>
+                            <td><input name="Prodi" id="Faculty" list="faculty3" size="45px">
+                                <datalist id="faculty3">
+                                    <option value="--Study Progam--">--Study Progam--</option>
+                                    <option value="Informatics">Informatics</option>
+                                    <option value="Informatics system">Informatics system</option>
+                                    <option value="industrial Engineering">industrial Engineering</option>
+                                    <option value="Mechanival Engineering">Mechanival Engineering</option>
+                                    <option value="Mechatronics Engineering">Mechatronics Engineering</option>
+                                    <option value="Electrical Engineering">Electrical Engineering</option>
+                                </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <font size="3"><label for="">Gender</label></font>
+                            </td>
+                            <td>
+                                <font><label for="pria">Male<input type="radio" name="gender" id="if"></label></font>
+                                <font><label for="wanita">Female<input type="radio" name="gender" id="if"></label>
+                                </font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <font size="3px"><label for="email">Email</label></font>
+                            </td>
+                            <td colspan="3"><input type="text" name="Email" id="if" size="148px"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <font size="3px"><label for="Address">Address</label></font>
+                            </td>
+                            <td colspan="3"><textarea name="Address" id="if" cols="143px" rows="4"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><br><br></td>
+                        </tr>
+                    </tbody>
+                    <!-- end pertama -->
+                    <!-- kedua -->
+                    <thead>
+                        <tr>
+                            <th bgcolor="iceblue" colspan="5" align="left" height="30px" width="1300px">
+                                <font>SUPPORT ACCOUNT</font>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">
+                                <font size="3px"><label for="support">Do You have scholarship support</label></font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="" id="support" value="No" checked>No</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="l" id="support" value="Yes">Yes</td>
+                            <td colspan="4"><input type="text" name="l" id="" size="148px"></td>
+                        </tr>
+                        <tr>
+                            <td><br><br></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <font size="3px"><label for="account">Do you have to the trunojoyo email
+                                        account?</label></font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="k" id="account" value="No" checked>No</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="k" id="account" value="Yes" >yes</td>
+                        </tr>
+                        <tr>
+                            <td><br><br></td>
+                        </tr>
+                    </tbody>
+                    <!-- end kedua -->
+                    <!-- ketiga -->
+                    <thead>
+                        <tr>
+                            <th bgcolor="iceblue" colspan="5" align="left" height="30px" width="120px">
+                                <font>EDUCATION</font>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <font size="3px"><label for="primary">Primary school</label></font>
+                            </td>
+                            <td><input type="text" name="" id="" size="45px"></td>
+                            <td><input type="text" name="" id="" size="45px"></td>
+                            <td><input name="primary" id="primary" list="pr3" size="45px">
+                                <datalist id="pr3">
+                                    <option value="--Year of greduate--"></option>
+                                    <option value="2008"></option>
+                                    <option value="2009"></option>
+                                    <option value="2010"></option>
+                                    <option value="2011"></option>
+                                    <option value="2012"></option>
+                                    <option value="2013"></option>
+                                </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>
+                                <font size="2">School Name</font>
+                            </td>
+                            <td>
+                                <font size="2">Website URL</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <font size="3px"><label for="primary">Middle school</label></font>
+                            </td>
+                            <td><input type="text" name="" id="" size="45px"></td>
+                            <td><input type="text" name="" id="" size="45px"></td>
+                            <td><input name="middle" id="primary" list="pr2" size="45px">
+                                <datalist id="pr2">
+                                    <option value="--Year of greduate--"></option>
+                                    <option value="2011"></option>
+                                    <option value="2012"></option>
+                                    <option value="2013"></option>
+                                    <option value="2014"></option>
+                                    <option value="2015"></option>
+                                    <option value="2016"></option>
+                                </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>
+                                <font size="2">School Name</font>
+                            </td>
+                            <td>
+                                <font size="2">Website URL</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <font size="3px"><label for="primary">High school</label></font>
+                            </td>
+                            <td><input type="text" name="" id="if" size="45px"></td>
+                            <td><input type="text" name="" id="if" size="45px"></td>
+                            <td><input name="High" id="if" list="pr1" size="45px">
+                                <datalist id="pr1">
+                                    <option value="--Year of greduate--"></option>
+                                    <option value="2014"></option>
+                                    <option value="2015"></option>
+                                    <option value="2016"></option>
+                                    <option value="2017"></option>
+                                    <option value="2018"></option>
+                                    <option value="2019"></option>
+                                </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>
+                                <font size="2">School Name</font>
+                            </td>
+                            <td>
+                                <font size="2">Website URL</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><br><br></td>
+                        </tr>
+                    </tbody>
+                    <!-- end ketiga -->
+                    <!-- keempat -->
+                    <thead>
+                        <tr>
+                            <th bgcolor="iceblue" colspan="5" align="left" height="30px" width="120px">
+                                <font>SOFTWARE SKILL</font>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <font size="3px"><label for="">Office Sofware</label></font>
+                            </td>
+                            <td><input type="checkbox" name="Word" id="if">Microsoft Word</td>
+                            <td><input type="checkbox" name="Access" id="if">Microsoft Acces</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td><input type="checkbox" name="Excel" id="if">Microsoft Excel</td>
+                            <td><input type="checkbox" name="Other" id="if">Other</td>
+                        </tr>
+                        <tr>
+                            <td><br></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <font size="3px"><label for="">Opening system</label></font>
+                            </td>
+                            <td><input type="checkbox" name="Windows" id="if">Windows</td>
+                            <td><input type="checkbox" name="mac os" id="if">macOS</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td><input type="checkbox" name="Linux" id="if">Linux</td>
+                            <td><input type="checkbox" name="other" id="if">Other</td>
+                        </tr>
+                        <tr>
+                            <td><br></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <font size="3px"><label for="">Progamming languange</label></font>
+                            </td>
+                            <td><input type="checkbox" name="python" id="if">Python</td>
+                            <td><input type="checkbox" name="c++" id="if">C++</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td><input type="checkbox" name="java" id="if">Java</td>
+                            <td><input type="checkbox" name="other" id="if">Other</td>
+                        </tr>
+                        <tr>
+                            <td><br><br></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td></td>
+                            <td><input type="submit" name="simpan" id="if" value="Submit Form"></td>
+                        </tr>
+                        <tr>
+                            <td><br><br></td>
+                        </tr>
+                    </tbody>
+                    <!-- end keempat -->
+                </table>
+            </font>
+        </form>
+    </fieldset>
+</body>
+
+</html>

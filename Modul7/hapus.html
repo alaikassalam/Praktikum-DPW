@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Mengatur karakter encoding dokumen ke UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mengatur tampilan agar responsif di berbagai perangkat -->
+    <title>TPPModul7</title> <!-- Judul halaman -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Menghubungkan CSS Bootstrap -->
+    <style>
+        /* Style untuk footer */
+        .footer {
+            background-color: rgb(234, 231, 231); /* Warna latar belakang footer */
+            padding: 20px 0; /* Padding atas dan bawah footer */
+            text-align: center; /* Menyelaraskan teks ke tengah */
+            width: 100%; /* Lebar penuh */
+            position: relative; /* Posisi relatif */
+            bottom: 0; /* Tetap di bagian bawah halaman */
+        }
+
+        /* Style untuk konten */
+        .content {
+            padding-top: 70px; /* Padding atas untuk konten */
+            margin-bottom: 70px; /* Margin bawah untuk konten */
+            /* Tinggi footer */
+        }
+
+        body {
+            display: flex; /* Mengatur flexbox untuk body */
+            flex-direction: column; /* Mengatur arah flex ke kolom */
+            min-height: 100vh; /* Tinggi minimum 100% viewport height */
+        }
+
+        .centered-content {
+            display: flex; /* Mengatur flexbox */
+            justify-content: center; /* Menyelaraskan ke tengah secara horizontal */
+            align-items: center; /* Menyelaraskan ke tengah secara vertikal */
+            flex-direction: column; /* Mengatur arah flex ke kolom */
+        }
+
+        .centered-image,
+        .centered-video {
+            width: 60%; /* Lebar 60% dari kontainer induk */
+            height: auto; /* Tinggi otomatis untuk mempertahankan rasio aspek */
+        }
+
+        .carousel-inner img {
+            width: 100%; /* Lebar penuh untuk gambar carousel */
+            height: auto; /* Tinggi otomatis untuk mempertahankan rasio aspek */
+        }
+
+        .card-img-top {
+            width: 100%; /* Lebar penuh untuk gambar kartu */
+            height: 200px; /* Tinggi tetap untuk gambar kartu */
+            object-fit: cover; /* Menyesuaikan gambar agar sesuai dalam elemen */
+        }
+
+        .main-content-img {
+            width: 100%; /* Lebar penuh untuk gambar utama */
+            height: 300px; /* Tinggi tetap untuk gambar utama */
+            object-fit: cover; /* Menyesuaikan gambar agar sesuai dalam elemen */
+        }
+
+        .contact-container {
+            display: flex; /* Mengatur flexbox untuk kontainer kontak */
+            justify-content: center; /* Menyelaraskan ke tengah secara horizontal */
+            align-items: center; /* Menyelaraskan ke tengah secara vertikal */
+            height: 100%; /* Tinggi penuh */
+        }
+
+        .contact-form {
+            width: 50%; /* Lebar 50% dari kontainer induk */
+            background-color: #f8f9fa; /* Warna latar belakang form kontak */
+            padding: 20px; /* Padding untuk form kontak */
+            border-radius: 10px; /* Sudut melengkung */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk form kontak */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"> <!-- Navbar dengan Bootstrap -->
+        <a class="navbar-brand" href="#">Alaikassalam</a> <!-- Nama brand pada navbar -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- Konten navbar yang dapat di-collapse -->
+            <ul class="navbar-nav ml-auto"> <!-- Daftar navigasi dengan margin kiri otomatis -->
+                <!-- Link ke Beranda -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- Link ke Makanan Favorit -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#makananFavorit">Makanan Favorit</a>
+                </li>
+                <!-- Link ke Video Kampus -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#videoKampus">Video Kampus</a>
+                </li>
+                <!-- Link ke Formulir Kontak -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+                <!-- Link ke instagram -->
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/allkssllm/" target="_blank">Instagram</a>
+                </li>
+                <!-- Link ke whatsapp -->
+                <li class="nav-item">
+                    <a class="nav-link" href="https://api.whatsapp.com/resolve/?deeplink=%2F%28nomor%29.&not_found=1"
+                        target="_blank">WhatsApp</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main class="container-fluid mt-5 content" id="beranda"> <!-- Bagian konten utama -->
+        <div class="row">
+            <!-- Bagian Content -->
+            <div class="col-md-6">
+                <h1>Selamat Datang</h1> <!-- Judul selamat datang -->
+                <p>Di sini saya akan menceritakan sedikit tentang diri saya</p>
+                <p>Sebagai anak seorang petani di Madura, impianku untuk menjadi programmer tidak pernah surut.
+                    Meski bergabung di semester kedua di kampus negeri satu-satunya di Madura pada tahun 2023, tantangan
+                    tidak mengurangi semangatku. Setiap hari kuhadapi dengan tekad kuat, belajar programming dengan
+                    penuh
+                    semangat, dan tanpa ragu mencari ilmu sebanyak yang kumampu. Meski jalannya penuh rintangan, aku
+                    yakin
+                    dengan kerja keras dan ketekunan, suatu hari aku akan mewujudkan impianku menjadi programmer yang
+                    handal. <br>
+                    Jangan lupa follow <strong>instagram</strong> saya dan jangan lupa chat <strong>whatsapp</strong>
+                    saya.</p>
+            </div>
+            <!-- Bagian Gambar -->
+            <div class="col-md-6 centered-content">
+                <img src="walpaper1.jpg" alt="Foto Anda" class="img-fluid main-content-img"> <!-- Gambar utama dengan gaya responsif -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Makanan Favorit -->
+    <main class="container-fluid mt-5 content" id="makananFavorit"> <!-- Bagian makanan favorit -->
+        <div class="row">
+            <div class="col-12 centered-content">
+                <h2>Makanan Favorit Saya</h2>
+                <div class="card-group"> <!-- Grup kartu untuk makanan favorit -->
+                    <div class="card">
+                        <img src="ayam geprek.jpeg" class="card-img-top" alt="Ayam Geprek">
+                        <div class="card-body">
+                            <h5 class="card-title">Ayam Geprek</h5>
+                            <p class="card-text">Ayam geprek adalah hidangan ayam goreng yang dihaluskan dengan sambal
+                                pedas.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="nasi goreng.jpeg" class="card-img-top" alt="Nasi Goreng">
+                        <div class="card-body">
+                            <h5 class="card-title">Nasi Goreng</h5>
+                            <p class="card-text">Nasi goreng adalah hidangan nasi yang digoreng dengan bumbu dan bahan
+                                tambahan lainnya.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="soto ayam.jpeg" class="card-img-top" alt="Soto Ayam">
+                        <div class="card-body">
+                            <h5 class="card-title">Soto Ayam</h5>
+                            <p class="card-text">Soto ayam adalah sup ayam tradisional Indonesia dengan bumbu rempah
+                                khas.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Video Kampus -->
+    <main class="container-fluid mt-5 content" id="videoKampus"> <!-- Bagian video kampus -->
+        <div class="row">
+            <div class="col-12 centered-content">
+                <h2>Video Tentang Kampus</h2>
+                <div class="embed-responsive embed-responsive-16by9 centered-video"> <!-- Video embed responsif -->
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MSjaSMKHLv8"
+                        allowfullscreen></iframe> <!-- Video YouTube tentang kampus -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Formulir Kontak -->
+    <main class="container-fluid mt-5 content" id="kontak"> <!-- Bagian formulir kontak -->
+        <div class="row contact-container">
+            <div class="contact-form">
+                <h2>Kontak</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nama:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan:</label>
+                        <textarea class="form-control" id="message" rows="4"
+                            placeholder="Masukkan pesan Anda"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kirim</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto"> <!-- Bagian footer -->
+        <div class="container-fluid">
+            <span class="text-muted">© 2024 Alaikassalam. All rights reserved.</span> <!-- Teks footer -->
+        </div>
+    </footer>
+
+    <!-- Menghubungkan JavaScript Bootstrap dan jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

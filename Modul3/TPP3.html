@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Modul 3</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Data Registrasi :</legend>
+            <table border="0">
+                <tr>
+                    <td><label for="username">Username :</label></td>
+                    <td><input type="text" name="username" id="username" size="20" maxlength="20" required /><br></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password :</label></td>
+                    <td><input type="password" name="password" id="password" size="20" required /><br></td>
+                </tr>
+                <tr>
+                    <td><label for="birthdate">Tanggal Lahir :</label></td>
+                    <td><input type="date" name="birthdate" id="birthdate" required /><br></td>
+                </tr>
+                <tr>
+                    <td><label for="telephone">Telepon :</label></td>
+                    <td><input name="telephone" id="telephone" placeholder="xxx-xxxxxx" pattern="[0-9]{3}-[0-9]{7}"
+                            type="tel" required /><br></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Jenis Kelamin :</label></td>
+                    <td>
+                        <label for="male">Laki-Laki</label>
+                        <input type="radio" name="gender" id="male" value="male" />
+                        <label for="female">Perempuan</label>
+                        <input type="radio" name="gender" id="female" value="female" checked /><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label for="binary">Bersedia menerima iklan melalui email?</label>
+                        <input type="checkbox" name="binary" id="binary" checked />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit" name="button1" id="button1">
+                        <input type="reset" value="Reset" name="button2" id="button2">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>

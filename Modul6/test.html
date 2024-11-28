@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPModul06</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Mengimpor jQuery versi 3.5.1 dari CDN -->
+</head>
+
+<body>
+    <h2>Order Barang</h2> <!-- Judul halaman -->
+    <form id="formOrder"> <!-- Formulir untuk pesanan barang -->
+        <table id="tabelBarang">
+            <tr>
+                <th align="center">Nama Barang</th> <!-- Header kolom untuk Nama Barang -->
+                <th align="center">Harga Barang</th> <!-- Header kolom untuk Harga Barang -->
+                <th align="center">Jumlah Barang</th> <!-- Header kolom untuk Jumlah Barang -->
+                <th align="center">Subtotal</th> <!-- Header kolom untuk Subtotal -->
+                <th align="center">Aksi</th> <!-- Header kolom untuk Aksi (Hapus) -->
+            </tr>
+        </table>
+        <input type="button" value="Tambah Barang" id="tambahBarang"> <!-- Tombol untuk menambah baris barang baru -->
+        <hr><br>
+        <div>Total Harga: <span id="totalHarga"></span></div> <!-- Menampilkan total harga semua barang -->
+    </form>
+
+    <script>
+        function hitungSubtotal() {
+            let totalHarga = 0; // Inisialisasi total harga
+
+            $('.subtotal_input').each(function () { // Iterasi setiap elemen dengan kelas subtotal_input
+                const harga = parseFloat($(this).closest('tr').find('.harga_barang_input').val()) || 0; // Ambil nilai harga barang, jika kosong atau tidak valid, set 0
+                const jumlah = parseFloat($(this).closest('tr').find('.jumlah_barang_input').val()) || 0; // Ambil nilai jumlah barang, jika kosong atau tidak valid, set 0
+                const subtotal = harga * jumlah; // Hitung subtotal (harga * jumlah)
+
+                $(this).val(subtotal.toFixed()); // Set nilai subtotal di input subtotal
+                totalHarga += subtotal; // Tambahkan subtotal ke total harga
+            });
+
+            $('#totalHarga').text(totalHarga.toFixed()); // Tampilkan total harga yang sudah dihitung
+        }
+
+        $(document).ready(function () {
+            $('#tambahBarang').click(function () { // Ketika tombol tambahBarang diklik
+                $('#tabelBarang').append(`
+            <tr>
+                <td><input type="text" name="nama_barang[]" required></td> <!-- Input untuk Nama Barang -->
+                <td><input type="number" name="harga_barang[]" class="harga_barang_input" required></td> <!-- Input untuk Harga Barang -->
+                <td><input type="number" name="jumlah_barang[]" class="jumlah_barang_input" required></td> <!-- Input untuk Jumlah Barang -->
+                <td><input type="number" name="subtotal[]" class="subtotal_input" readonly></td> <!-- Input untuk Subtotal, hanya-baca -->
+                <td><input type="button" value="Hapus" class="hapus_button"></td> <!-- Tombol untuk menghapus baris -->
+            </tr>
+        `);
+            });
+
+            $('#formOrder').on('click', '.hapus_button', function () { // Ketika tombol hapus diklik
+                $(this).closest('tr').remove(); // Hapus baris yang bersangkutan
+                hitungSubtotal(); // Hitung ulang total harga
+            });
+
+            $('#formOrder').on('input', '.harga_barang_input, .jumlah_barang_input', function () { // Ketika nilai harga atau jumlah berubah
+                hitungSubtotal(); // Hitung ulang subtotal dan total harga
+            });
+        });
+    </script>
+</body>
+
+</html>

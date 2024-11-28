@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js""></script>
+    </head>
+    <body>
+        <div class="card">
+            <form class="form" action="">
+                <label for="nama">Nama</label>
+                <input type="text" name="nama" id="nama" required><br>
+
+                <label for="usia">Masukkan umur</label>
+                <input type="number" name="usia" id="usia" min="10" max="20" required><br>
+
+                <label for="sekolah">Nama Sekolah</label>
+                <input type="text" name="sekolah" id="sekolah" required><br>
+
+                <label for="kelamin"  required>Jenis Kelamin :
+                    <input type="radio" name="kelamin" id="kelamin">
+                    <label for="lk">laki laki</label>
+                    <input type="radio" name="pr" id="pr">
+                    <label for="pr">perempuan</label><br>
+                </label>
+
+                <input type="submit" name="submit" id="submit" required>
+            </form>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $(".form").submit(function(cek){
+                    cek.preventDefault();
+                    var nama = $("#nama").val() 
+                    if (nama.length < 4 ) {
+                        alert("nama anda Salah Cobalah kembali");
+                        location.reload();
+
+                    } else {
+                        alert("Selamat Anda sudah Terdaftar dalam lomba catur")
+                        location.reload();
+                    }
+    
+                })
+            });
+        </script>
+    </body>
+</html>

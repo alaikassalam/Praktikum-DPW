@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPPModul6</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .satu {
+            display: none;
+        }
+
+        .dua {
+            display: none;
+        }
+
+        .subSatu {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>File Explorer</h1>
+    <div class="tree">
+        <div class="folderPertama"><i class="fas fa-folder"></i> Folder 1
+            <ul class="satu">
+                <li id="sub"><i class="fas fa-folder"></i> Sub Folder 1
+                    <ul class="subSatu">
+                        <li><i class="fas fa-file"></i> <a href="#">File 5</a></li>
+                        <li><i class="fas fa-file"></i> <a href="#">File 6</a></li>
+                    </ul>
+                </li>
+                <li><i class="fas fa-file"></i> <a href="#">File 1</a></li>
+                <li><i class="fas fa-file"></i> <a href="#">File 2</a></li>
+            </ul>
+        </div>
+        <div class="folderKedua"><i class="fas fa-folder"></i> Folder 2
+            <ul class="dua">
+                <li><i class="fas fa-file"></i> <a href="#">File 3</a></li>
+                <li><i class="fas fa-file"></i> <a href="#">File 4</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.folderPertama').click(function (event) {
+                event.stopPropagation();
+                $('.satu').toggle();
+            });
+            $('#sub').click(function (event) {
+                event.stopPropagation();
+                $('.subSatu').toggle();
+            });
+            $('.folderKedua').click(function () {
+                $('.dua').toggle();
+            });
+        });
+    </script>
+</body>
+
+</html>

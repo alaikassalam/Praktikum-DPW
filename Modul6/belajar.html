@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPModul06</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <h2>Order Barang</h2>
+    <form id="formOrder">
+        <table id="tabelBarang">
+            <tr>
+                <th align="center">Nama Barang</th>
+                <th align="center">Harga Barang</th>
+                <th align="center">Jumlah Barang</th>
+                <th align="center">Subtotal</th>
+                <th align="center">Aksi</th>
+            </tr>
+        </table>
+        <input type="button" value="Tambah Barang" id="tambahBarang">
+        <hr><br>
+        <div>Total Harga: <span id="totalHarga"></span></div>
+    </form>
+
+    <script>
+        function hitungSubtotal() {
+            let totalHarga = 0;
+
+            $('.subtotal_input').each(function () {
+                const harga = parseFloat($(this).closest('tr').find('.harga_barang_input').val()) || 0;
+                const jumlah = parseFloat($(this).closest('tr').find('.jumlah_barang_input').val()) || 0;
+                const subtotal = harga * jumlah;
+
+                $(this).val(subtotal.toFixed());
+                totalHarga += subtotal;
+            });
+
+            $('#totalHarga').text(totalHarga.toFixed());
+        }
+
+        $(document).ready(function () {
+            $('#tambahBarang').click(function () {
+                $('#tabelBarang').append(`
+            <tr>
+                <td><input type="text" name="nama_barang[]" required></td>
+                <td><input type="number" name="harga_barang[]" class="harga_barang_input" required></td>
+                <td><input type="number" name="jumlah_barang[]" class="jumlah_barang_input" required></td>
+                <td><input type="number" name="subtotal[]" class="subtotal_input" readonly></td>
+                <td><input type="button" value="Hapus" class="hapus_button"></td>
+            </tr>
+        `);
+            });
+
+            $('#formOrder').on('click', '.hapus_button', function () {
+                $(this).closest('tr').remove();
+                hitungSubtotal();
+            });
+
+            $('#formOrder').on('input', '.harga_barang_input, .jumlah_barang_input', function () {
+                hitungSubtotal();
+            });
+        });
+    </script>
+</body>
+
+</html>
